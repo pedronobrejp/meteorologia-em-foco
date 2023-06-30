@@ -42,17 +42,17 @@
                             <div class="col text-left">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://g1.globo.com/politica/blog/andreia-sadi/post/2023/06/06/lira-reclama-para-chefe-da-pf-de-vazamentos-de-operacao-que-atingiu-aliados.ghtml" target="_blank">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://pedronobrejp.github.io/meteorologia-em-foco/index.html" target="_blank">
                                             <img src="assets/facebook.png" alt="Compartilhar no Facebook" style="width: 35px; height: 35px; margin-bottom: -40px;">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="https://twitter.com/intent/tweet?url=https://g1.globo.com/politica/blog/andreia-sadi/post/2023/06/06/lira-reclama-para-chefe-da-pf-de-vazamentos-de-operacao-que-atingiu-aliados.ghtml" target="_blank">
+                                        <a href="https://twitter.com/intent/tweet?url=https://pedronobrejp.github.io/meteorologia-em-foco/index.html" target="_blank">
                                             <img src="assets/twitter.png" alt="Compartilhar no Twitter" style="width: 35px; height: 35px; margin-bottom: -40px;">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="https://www.linkedin.com/shareArticle?url=https://g1.globo.com/politica/blog/andreia-sadi/post/2023/06/06/lira-reclama-para-chefe-da-pf-de-vazamentos-de-operacao-que-atingiu-aliados.ghtml" target="_blank">
+                                        <a href="https://www.linkedin.com/shareArticle?url=https://pedronobrejp.github.io/meteorologia-em-foco/index.html" target="_blank">
                                             <img src="assets/linkedin.png" alt="Compartilhar no LinkedIn" style="width: 35px; height: 35px; margin-bottom: -40px;">
                                         </a>
                                     </li>
@@ -77,12 +77,12 @@
                                 margin-right: auto;
                             }
                         </style>
-                        <a href="article1.html"><img class="card-img-top centered-image" src="assets/diag_perf_hidroestimativa.png" alt="..." style="width: 500px; height: auto;"/></a>
+                        <a href="diagrama-de-performance.html"><img class="card-img-top centered-image" src="assets/diag_perf_hidroestimativa.png" alt="..." style="width: 500px; height: auto;"/></a>
                         <div class="card-body">
                             <div class="small text-muted">Junho 6, 2023</div>
                             <h2 class="card-title">Diagrama de performance para avaliar modelos meteorológicos</h2>
                             <p class="card-text">Uma ótima ferramenta para comparar previsões produzidas por modelos meteorlógicos com dados observados.</p>
-                            <a class="btn btn-primary" href="article1.html">Leia mais →</a>
+                            <a class="btn btn-primary" href="diagrama-de-performance.html">Leia mais →</a>
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -196,6 +196,14 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
+            const searchInput = document.getElementById('search-input');
+
+            searchInput.addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) { // Verifica se a tecla pressionada é a tecla Enter (código 13)
+                event.preventDefault(); // Previne o comportamento padrão do formulário
+                document.getElementById('search-button').click(); // Aciona o clique no botão de busca
+            }
+            });
             document.getElementById('search-button').addEventListener('click', function() {
                 var searchTerm = document.getElementById('search-input').value;
                 // Aqui você pode adicionar a lógica para realizar a busca com o termo fornecido

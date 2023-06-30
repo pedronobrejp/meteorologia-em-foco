@@ -102,7 +102,7 @@
 
             // Example search results
             var searchResults = [
-                { title: 'Diagrama de performance para avaliar modelos meteorológicos', url: 'article1.html', content: 'Uma ótima ferramenta para comparar previsões produzidas por modelos meteorlógicos com dados observados' }
+                { title: 'Diagrama de performance para avaliar modelos meteorológicos', url: 'diagrama-de-performance.html', content: 'Uma ótima ferramenta para comparar previsões produzidas por modelos meteorlógicos com dados observados' }
                 // { title: 'Article 2', url: 'article2.html', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.' },
                 // { title: 'Article 3', url: 'article3.html', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.' },
                 // { title: 'Article 4', url: 'article4.html', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.' },
@@ -127,6 +127,16 @@
 
         // Perform the initial search
         performSearch();
+
+        // Search with enter click
+        const searchInput = document.getElementById('search-input');
+
+        searchInput.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) { // Verifica se a tecla pressionada é a tecla Enter (código 13)
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            document.getElementById('search-button').click(); // Aciona o clique no botão de busca
+        }
+        });
 
         // Attach event listener to search button
         document.getElementById('search-button').addEventListener('click', function () {
