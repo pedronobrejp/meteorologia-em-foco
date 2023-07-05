@@ -19,10 +19,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mim.html">Sobre mim</a></li>
+                    <li class="nav-item" style="margin-right: 11px;"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <!-- Search widget-->
+                    <li class="input-group" style="width: 200px;">
+                        <input id="search-input" class="form-control" type="text" placeholder="Pesquise um termo..." aria-label="Pesquise um termo..." aria-describedby="button-search" style="font-size: 12px;">
+                        <button id="search-button" class="btn btn-primary nav-link" type="button" style="font-size: 12px; background-color: grey; border-color: grey; width: 45px;">Ir</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -43,16 +47,6 @@
                 <div id="search-results"></div>
             </div>
             <div class="col-lg-4">
-                <!-- Side widgets -->
-                <div class="card mb-4">
-                    <div class="card-header">Search</div>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input id="search-input" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                            <button id="search-button" class="btn btn-primary" type="button">Go!</button>
-                        </div>
-                    </div>
-                </div>
                 <div class="card mb-4">
                     <div class="card-header">Categories</div>
                     <div class="card-body">

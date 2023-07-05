@@ -21,7 +21,12 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="sobre-mim.html">Sobre mim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item" style="margin-right: 11px;"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <!-- Search widget-->
+                        <li class="input-group" style="width: 200px;">
+                            <input id="search-input" class="form-control" type="text" placeholder="Pesquise um termo..." aria-label="Pesquise um termo..." aria-describedby="button-search" style="font-size: 12px;">
+                            <button id="search-button" class="btn btn-primary nav-link" type="button" style="font-size: 12px; background-color: grey; border-color: grey; width: 45px;">Ir</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -50,16 +55,6 @@
                 </div>
                 <!-- Side widgets-->
                 <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Buscar</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input id="search-input" class="form-control" type="text" placeholder="Pesquise um termo...." aria-label="Pesquise um termo...." aria-describedby="button-search" />
-                                <button id="search-button" class="btn btn-primary" type="button">Ir</button>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Categories widget-->
                     <div class="card mb-4">
                         <div class="card-header">Categorias</div>
@@ -92,6 +87,14 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
+            const searchInput = document.getElementById('search-input');
+
+            searchInput.addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) { // Verifica se a tecla pressionada é a tecla Enter (código 13)
+                event.preventDefault(); // Previne o comportamento padrão do formulário
+                document.getElementById('search-button').click(); // Aciona o clique no botão de busca
+            }
+            });
             document.getElementById('search-button').addEventListener('click', function() {
                 var searchTerm = document.getElementById('search-input').value;
                 // Aqui você pode adicionar a lógica para realizar a busca com o termo fornecido
