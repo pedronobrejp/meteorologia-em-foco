@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Meteorologia em Foco</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/LogoMakr-95Kk08.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="assets/LogoMakr-43Vlee.png" alt="Meteorologia em Foco Logo" style="width: 150px; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mim.html">Sobre mim</a></li>
+                    <li class="nav-item" style="margin-right: 11px;"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <!-- Search widget-->
+                    <li class="input-group" style="width: 200px;">
+                        <input id="search-input" class="form-control" type="text" placeholder="Pesquise um termo..." aria-label="Pesquise um termo..." aria-describedby="button-search" style="font-size: 12px;">
+                        <button id="search-button" class="btn btn-primary nav-link" type="button" style="font-size: 12px; background-color: grey; border-color: grey; width: 45px;">Ir</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page header with logo and tagline-->
+    <header class="py-5 bg-light border-bottom mb-4" style="background-image: url(assets/26306.jpg); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 style="font-size: 30px; margin-top: -15px;">Compartilhe!</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-left">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://pedronobrejp.github.io/meteorologia-em-foco/diagrama-de-performance.html" target="_blank">
+                                        <img src="assets/facebook.png" alt="Compartilhar no Facebook" style="width: 40px; height: 40px; margin-bottom: -30px;">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/intent/tweet?url=https://pedronobrejp.github.io/meteorologia-em-foco/diagrama-de-performance.html" target="_blank">
+                                        <img src="assets/twitter.png" alt="Compartilhar no Twitter" style="width: 40px; height: 40px; margin-bottom: -30px;">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/shareArticle?url=https://pedronobrejp.github.io/meteorologia-em-foco/diagrama-de-performance.html" target="_blank">
+                                        <img src="assets/linkedin.png" alt="Compartilhar no LinkedIn" style="width: 40px; height: 40px; margin-bottom: -30px;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <!-- Article content -->
+    <div class="container">
+        <article class="my-5">
+            <h2 class="mb-4">Já ouviu falar no GloFAS?</h2>
+            <p>Desde 2018, o Global Flood Awareness System (GloFAS) é um sistema operacional do Copernicus Emergency Management Service da Comissão Europeia, para prever e monitorar inundações em todo o mundo, além de produzir previsões diárias de cheias (previsões GloFAS, desde 2011) e perspectivas mensais de vazões sazonais (GloFAS Sazonal, desde novembro de 2017).</p>
+            <p>Em 2021, um novo serviço operacional para o monitoramento automatizado, global e baseado em satélite de inundações em tempo quase real (NRT) foi integrado ao GloFAS. O novo componente global de monitoramento de inundações do GloFAS é baseado no processamento automatizado de dados de satélite Copernicus Sentinel-1 Synthetic Aperture Radar (SAR), usando uma abordagem de conjunto, com base em três algoritmos separados de detecção de inundação por satélite de última geração.</p>
+            <p>O visualizador de mapas GloFAS é adaptado para fornecer uma visão geral rápida da situação hidrometeorológica atual e futura e dos eventos de inundação em andamento e futuros. Informações adicionais, incluindo a evolução detalhada das previsões de vazão, são fornecidas nos pontos de relatório.</p>
+            <p>As previsões do GloFAS são atualizadas uma vez por dia, enquanto o monitoramento de inundações por satélite é continuamente atualizado assim que uma nova imagem do Sentinel-1 está disponível.</p>
+            <p>Através do cartopy é possível gerar mapas de pontos de alerta, conforme exemplificado no mapa abaixo. Pontos roxos/vermelhos/amarelos denotam inundações esperadas para exceder o período de retorno de 20 anos (roxo), 5 anos (vermelho) ou 2 anos (amarelo) em pelo menos 30%. Esta categoria de inundação (cor) é determinada pela maior probabilidade no período de 30 dias. O contorno preto mostra o pico de inundação nos primeiros 3 dias da previsão, enquanto as cores pálidas indicam inundações distantes além dos primeiros 10 dias da previsão. Os números indicam a porcentagem de membros do conjunto que excedem o período de retorno específico. A forma denota tendência ascendente (triângulo ascendente), descendente (triângulo descendente) ou estagnada (círculo) da descarga média do conjunto dentro do horizonte de previsão. Os quadrados cinzas representam pontos reportados sem inundação, quando a probabilidade de retorno de 2 anos é menor que 30%.</p>
+            <div style="display: flex; justify-content: center;">
+                <img src="assets/GloFAS-map.png" alt="Diagrama de performance" style="width: 500px; height: auto;" class="img-fluid mb-4">
+            </div>
+            <p>O código a seguir é um exemplo de como plotar uma mapa contendo pontos de alerta usando os dados do GloFAS:</p>
+            <style>
+                .gist-container {
+                    width: 100%;
+                    overflow: hidden;
+                }
+            </style>
+            <div class="gist-container">
+                <script src="https://gist.github.com/pedronobrejp/ea91d6d65050e1df14a5f83cc2b5cd85.js"></script>
+            </div>
+            <p>Através deste artigo é possível fazer uma mapa de alerta de inundação usando dados do GloFAS com o Cartopy. O mesmo script pode ser adaptado para gerar dados com outros produtos, cujos detalhes podem ser consultados neste <a href="https://www.globalfloods.eu/"> endereço eletrônico</a>.</p>
+        </article>
+    </div>              
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Direitos autorais &copy; Meteorologia em Foco 2023</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        const searchInput = document.getElementById('search-input');
+
+        searchInput.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) { // Verifica se a tecla pressionada é a tecla Enter (código 13)
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            document.getElementById('search-button').click(); // Aciona o clique no botão de busca
+        }
+        });
+        document.getElementById('search-button').addEventListener('click', function() {
+            var searchTerm = document.getElementById('search-input').value;
+            // Aqui você pode adicionar a lógica para realizar a busca com o termo fornecido
+            console.log('Searching for: ' + searchTerm);
+            // Por exemplo, você pode redirecionar para uma página de resultados de busca:
+            window.location.href = 'search-results.html?query=' + encodeURIComponent(searchTerm);
+        });
+    </script>  
+</body>
+</html>
